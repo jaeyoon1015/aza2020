@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 pay page
+    hr
+
+    .card
+        .card-body
+            .label.h3 카드 번호 입력
+            br
+            .row
+                .col-md-3
+                    a.input.form-control(type='text', name='card_no1', id='card_no1', autofocus, required)
+                .col-md-3
+                    a.input.form-control(type='text', name='card_no2', id='card_no2', required)
+                .col-md-3
+                    a.input.form-control(type='text', name='card_no3', id='card_no3', required)
+                .col-md-3
+                    a.input.form-control(type='text', name='card_no4', id='card_no4', required)
+            br
+            a.btn.btn-success.btn-lg(href='/finish', role='button' style='float:right') 입력 완료

@@ -1,0 +1,103 @@
+extends layout
+​
+block content
+    .super_container
+      .cart_info
+        .container
+          .row
+            .col
+              // Column Titles
+              .cart_info_columns.clearfix
+                .cart_info_col.cart_info_col_product Product
+                .cart_info_col.cart_info_col_price Price
+                .cart_info_col.cart_info_col_quantity Quantity
+                .cart_info_col.cart_info_col_total Total
+          .row.cart_items_row
+            .col
+              // Cart Item
+              .cart_item.d-flex.flex-lg-row.flex-column.align-items-lg-center.align-items-start.justify-content-start
+                // Name
+                .cart_item_product.d-flex.flex-row.align-items-center.justify-content-start
+                  .cart_item_image
+                    div
+                      img(src='https://i2.wp.com/inthenews.co.kr/wp-content/uploads/2019/09/%EB%B9%84%EC%8A%A4%ED%8F%AC%ED%81%AC.jpg?w=1000' alt='')
+                  .cart_item_name_container
+                    .cart_item_name
+                      a(href='#') SAMSUNG 비스포크 냉장고
+                    .cart_item_edit
+                      a(href='#') Edit Product
+                // Price
+                .cart_item_price ₩2,600,000
+                // Quantity
+                .cart_item_quantity
+                    .product_quantity_container
+                        .product_quantity.clearfix
+                        span Qty
+                        input#quantity_input(type='text' pattern='[0-9]*' value='1')
+                        .quantity_buttons
+                            #quantity_inc_button.quantity_inc.quantity_control
+                            i.fa.fa-chevron-up(aria-hidden='true')
+                            #quantity_dec_button.quantity_dec.quantity_control
+                            i.fa.fa-chevron-down(aria-hidden='true')
+​
+                // Total
+                .cart_item_total ₩2,600,000
+          .row.row_cart_buttons
+            .col
+              .cart_buttons.d-flex.flex-lg-row.flex-column.align-items-start.justify-content-start
+                .button.continue_shopping_button
+                  a(href='#') Continue shopping
+                .cart_buttons_right.ml-lg-auto
+                  .button.clear_cart_button
+                    a(href='#') Clear cart
+                  .button.update_cart_button
+                    a(href='#') Update cart
+          .row.row_extra
+            .col-lg-4
+              // Delivery
+              .delivery
+                .section_title Shipping method
+                .section_subtitle Select the one you want
+                .delivery_options
+                  label.delivery_option.clearfix
+                    | Add Point 
+                    input(type='radio' name='radio')
+                    span.checkmark
+                    span.delivery_price ₩50,000
+                  label.delivery_option.clearfix
+                    | Accumulated Point
+                    input(type='radio' name='radio')
+                    span.checkmark
+                    span.delivery_price ₩65,000
+                  label.delivery_option.clearfix
+                    | Today Samusng Stock
+                    input(type='radio' checked='checked' name='radio')
+                    span.checkmark
+                    span.delivery_price ₩59,500
+              // Coupon Code
+              .coupon
+                .section_title Coupon code
+                .section_subtitle Enter your coupon code
+                .coupon_form_container
+                  form#coupon_form.coupon_form(action='#')
+                    input.coupon_input(type='text' required='required')
+                    button.button.coupon_button
+                      span Apply
+            .col-lg-6.offset-lg-2
+              .cart_total
+                .section_title Cart total
+                .section_subtitle Final info
+                .cart_total_container
+                  ul
+                    li.d-flex.flex-row.align-items-center.justify-content-start
+                      .cart_total_title Subtotal
+                      .cart_total_value.ml-auto ₩2,600,000
+                    li.d-flex.flex-row.align-items-center.justify-content-start
+                      .cart_total_title Shipping
+                      .cart_total_value.ml-auto Free
+                    li.d-flex.flex-row.align-items-center.justify-content-start
+                      .cart_total_title Total
+                      .cart_total_value.ml-auto ₩2,600,000
+                .button.checkout_button
+                  a(href='#') Proceed to checkout
+Shared in

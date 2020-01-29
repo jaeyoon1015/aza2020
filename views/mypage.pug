@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  .container
+    .img(src='images/timoju.png' width="100" height="100")
+  .container
+    .row(style="border:1px solid #dee2e6; padding:15px;")
+      .col-md-2(style="border-right:1px solid #dee2e6")
+        img.item_thumb()
+      .col-md-10(style)
+        .span(style="font-size:1;") 저희 쇼핑몰을 이용해주셔서 감사합니다. 
+        .span(style="font-size:1;") "삼성" 주식을 구입하시기 까지 남은 포인트는 30,000 포인트입니다.
+    .row(style="border:2px solid #dee2e6; padding:15px; margin-top:20px;")
+      .col-md-3
+        .span(style="font-size:1;") * 가용포인트
+        .span(style="font-size:1;") * 사용포인트 
+      .col-md-3
+        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
+        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
+      .col-md-3(style="border-left:1px solid #dee2e6;")
+        .span(style="font-size:1;") * 주식 총 가치
+        .span(style="font-size:1;") * 사용포인트 
+      .col-md-3
+        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
+        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
+    .row(style="border-top:1px solid #444444; margin-top:30px;")
+      .col-md-3(style="border-right:1px solid #dee2e6;")
+        .span(style="margin-top:20px; text-align:center;") ORDER
+        .span(style="text-align:center; margin-bottom:20px;") 주문내역 조회
+      .col-md-9
+        .span(style="margin-top:20px; margin-left:20px; font-size:1;") 고객님께서 주문하신 상품의 주문 내역을 확인하실 수 있습니다. 
+        .span(style="font-size:1; margin-left:20px;") 비회원의 경우, 주문서의 주문번호와 비밀번호로 주문조회가 가능합니다.
+    .row(style="border-top:1px solid #dee2e6; ")
+      .col-md-3(style="border-right:1px solid #dee2e6;")
+        .span(style="margin-top:20px; text-align:center;") MY INFO
+        .span(style="text-align:center; margin-bottom:20px;") 회원 정보
+      .col-md-9
+        .span(style="margin-top:20px; margin-left:20px; font-size:1;") 회원이신 고객님의 개인정보를 관리하는 공간입니다.
+        .span(style="font-size:1; margin-left:20px;") 개인정보를 최신 정보로 유지하시면 보다 간편히 쇼핑을 즐기실 수 있습니다.
+    .row(style="border-top:1px solid #dee2e6; ")
+      .col-md-3(style="border-right:1px solid #dee2e6;")
+        .span(style="margin-top:20px; text-align:center;") WISH LIST
+        .span(style="text-align:center; margin-bottom:20px;") 관심 상품
+      .col-md-9
+        .span(style="margin-top:20px; margin-left:20px; font-size:1;") 관심상품으로 등록하신 상품의 목록을 보여드립니다.
+        .span(style="font-size:1; margin-left:20px;") 관심 갔던 제품을 한눈에 보실 수 있습니다.
+    .row(style="border-top:1px solid #dee2e6; ")
+      .col-md-3(style="border-right:1px solid #dee2e6;")
+        .span(style="margin-top:20px; text-align:center;") COUPON
+        .span(style="text-align:center; margin-bottom:20px;") 쿠폰
+      .col-md-9
+        .span(style="margin-top:20px; margin-left:20px; font-size:1;") 고객님이 보유하고 계신 쿠폰 내역을 보여드립니다.
+        .span(style="font-size:1; margin-left:20px;") 할인 받을 수 있는 쿠폰을 놓치지 마세요!
+    .row(style="border-top:1px solid #dee2e6; ")
+      .col-md-3(style="border-right:1px solid #dee2e6;")
+        .span(style="margin-top:20px; text-align:center;") MY BOARD
+        .span(style="text-align:center; margin-bottom:20px;") 게시물 관리
+      .col-md-9
+        .span(style="margin-top:20px; margin-left:20px; font-size:1;") 고객님께서 작성하신 게시물을 관리하는 공간입니다.
+        .span(style="font-size:1; margin-left:20px;") 고객님께서 작성하신 글을 한눈에 관리하실 수 있습니다. 
+    .row(style="border-top:1px solid #dee2e6; border-bottom:1px solid #444444; ")
+      .col-md-3(style="border-right:1px solid #dee2e6;")
+        .span(style="margin-top:20px; text-align:center;") ADDRESS
+        .span(style="text-align:center; margin-bottom:20px;") 배송 주소록 관리
+      .col-md-9
+        .span(style="margin-top:20px; margin-left:20px; font-size:1;") 자주 사용하는 배송지를 등록하고 관리하실 수 있습니다.
+        .span(style="font-size:1; margin-left:20px;") 거주하시는 곳이 바뀐다면 꼭 거주지를 변경해주세요.

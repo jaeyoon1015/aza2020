@@ -1,0 +1,51 @@
+extends layout
+block content
+    .super_container
+      .cart_info
+        .container(style='font-size:50px') 결제완료 
+          .row
+            .col
+              // Column Titles
+              .cart_info_columns.clearfix
+                .cart_info_col.cart_info_col_product Product
+                .cart_info_col.cart_info_col_price Price
+                .cart_info_col.cart_info_col_quantity Quantity
+                .cart_info_col.cart_info_col_total Total
+          .row.cart_items_row
+            .col
+              // Cart Item
+              .cart_item.d-flex.flex-lg-row.flex-column.align-items-lg-center.align-items-start.justify-content-start
+                // Name
+                .cart_item_product.d-flex.flex-row.align-items-center.justify-content-start
+                  .cart_item_image
+                    div
+                      img(src='https://i2.wp.com/inthenews.co.kr/wp-content/uploads/2019/09/%EB%B9%84%EC%8A%A4%ED%8F%AC%ED%81%AC.jpg?w=1000' alt='')
+                  .cart_item_name_container
+                    .cart_item_name
+                      a(href='#') SAMSUNG 비스포크 냉장고
+                    .cart_item_edit
+                      a(href='#') Edit Product
+                // Price
+                .cart_item_price ₩2,600,000
+                // Quantity
+                .cart_item_quantity 1
+                // Total
+                .cart_item_total ₩2,600,000
+          .row.row_extra
+            .col-lg-6.offset-lg-2
+              .cart_total
+                .section_title Point
+                .section_subtitle Final info
+                .cart_total_container
+                  ul
+                    li.d-flex.flex-row.align-items-center.justify-content-start
+                      .cart_total_title Accumulate Point
+                      .cart_total_value.ml-auto ₩60,000
+                    li.d-flex.flex-row.align-items-center.justify-content-start
+                      .cart_total_title Stock Purchase
+                      .cart_total_value.ml-auto ₩59,000 * 1
+                    li.d-flex.flex-row.align-items-center.justify-content-start
+                      .cart_total_title Remain Point
+                      .cart_total_value.ml-auto ₩1,000
+                .button.checkout_button
+                  a(href='#') Continue Shopping
