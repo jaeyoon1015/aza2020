@@ -8,36 +8,65 @@ block content
     //-         img(src='https://i2.wp.com/inthenews.co.kr/wp-content/uploads/2019/09/%EB%B9%84%EC%8A%A4%ED%8F%AC%ED%81%AC.jpg?w=1000', height=600)
     //-         | h1 비스포크 냉장고
             
-    .row
-        .col-sm-6(style='float:left;')
-            img(src='https://image.myomee.com/img_disp/goods/2/108/1022/2007531_S_10131000.jpg/dims/quality/90', height=600)
-        .col-sm-6.card
-            .card-body
-                .card-text
-                    .div
-                        .label.h1 SAMSUNG 
-                        .label.h3 BESPOKE 냉장고 4도어
-                        .label.h3 프리스탠딩 870L
-                        .label.h5 RF83746532
+    //- .row
+    //-     .col-sm-6(style='float:left;')
+    //-         img(src='https://image.myomee.com/img_disp/goods/2/108/1022/2007531_S_10131000.jpg/dims/quality/90', height=600)
+    //-     .col-sm-6.card
+    //-         .card-body
+    //-             .card-text
+    //-                 .div
+    //-                     .label.h1 SAMSUNG 
+    //-                     .label.h3 BESPOKE 냉장고 4도어
+    //-                     .label.h3 프리스탠딩 870L
+    //-                     .label.h5 RF83746532
 
-                    hr
-                    br
-                    br
-                    .card.w-50(style='background-color:#eee')
-                        .card-body
-                            .card-text
-                                .label.h5 판매가    3,240,000 원
-                                br
-                                .label.h6(style='font-weight: bold') 구매시 혜택 
-                                .label.h6 286,280 포인트 적립 예정,
-                                .label.h6 삼성카드 청구할인 5%
+    //-                 hr
+    //-                 br
+    //-                 br
+    //-                 .card.w-50(style='background-color:#eee')
+    //-                     .card-body
+    //-                         .card-text
+    //-                             .label.h5 판매가    3,240,000 원
+    //-                             br
+    //-                             .label.h6(style='font-weight: bold') 구매시 혜택 
+    //-                             .label.h6 286,280 포인트 적립 예정,
+    //-                             .label.h6 삼성카드 청구할인 5%
 
-                    br
-                    br
-                    br
-                    br
+    //-                 br
+    //-                 br
+    //-                 br
+    //-                 br
 
-                    a.btn.btn-outline-primary.btn-block(href='/pay', role='button' style='float:right') 결제하기
+    //-                 a.btn.btn-outline-primary.btn-block(href='/pay', role='button' style='float:right') 결제하기
 
 
+    .row(style="margin-top:40px;")
+        .col-md-8
+            p(style="text-align:center;")
+                img(src='https://image.myomee.com/img_disp/goods/2/108/1022/2007531_S_10131000.jpg/dims/quality/90', height=600)
+        .col-md-4(style="margin-top:80px;")
+            div(style="font-size:12px;color:#666;")  설치상품 | 즉시할인
+            div(style="font-size:32px; margin-top:10px;") <strong>셰프컬렉션 패밀리허브 921L Honed Black</strong>
+            div(style="font-size:12px; margin-bottom:5px;") RF10R9990M1
+            .row(style="border-top:1px solid; margin-top:20px;")
+            .row(style="margin-top:20px; background-color:#f2f2f2")
+                .col-sm-4(style="margin-top:20px; margin-left:10px;")
+                    div 판매가
+                    br
+                    div 구매시 혜택
+                    br
+                    div TIP
+                    br
+                    div 주의사항
+                    br
+                .col-sm-8(style="margin-top:20px; margin-right:10px;")
+                    div 3,240,000 원
+                    br
+                    div 286,280 포인트 적립 예정
+                    br
+                    div 삼성카드 청구할인 5%
+                    br
+                    div 배송 3주 이상 소요
+                    br
+                a.btn.btn-outline-primary.btn-block(href='/pay', role='button' style='float:right') 결제하기
     

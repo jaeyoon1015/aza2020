@@ -131,7 +131,6 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
-app.get('/dbtest', homeController.dbtest);
 app.get('/buy', buyController.click);
 app.get('/cart', buyController.showCart);
 app.get('/pay', payController.paying);
