@@ -1,22 +1,92 @@
 extends layout
-
 block content
-    h1 pay page
-    hr
-
-    .card
-        .card-body
-            .label.h3 카드 번호 입력
-            br
-            .row
-                .input-group
-                    .col-md-3
-                        a.input.form-control(type='text', id='card_no1')
-                    .col-md-3
-                        a.input.form-control(type='text', id='card_no2')
-                    .col-md-3
-                        a.input.form-control(type='text', id='card_no3')
-                    .col-md-3
-                        a.input.form-control(type='text', id='card_no4')
-            br
-            a.btn.btn-success.btn-lg(href='/finish', role='button' style='float:right') 입력 완료
+    .site-section
+      .container
+        .row.mb-5
+          .col-md-12
+            .bg-light.rounded.p-3
+              p.mb-0
+                a.d-inline-block(href='#') Click here
+                |  to continue Shopping
+        .row
+          .col-md-6.mb-5.mb-md-0
+            h2.h3.mb-3.text-black.font-heading-serif Billing Details
+            .p-3.p-lg-5.border
+              .form-group
+                label.text-black(for='c_country')
+                  | Country 
+                  span.text-danger *
+                select#c_country.form-control
+                  option(value='1') Select Your Bank Name
+                  option(value='2') NH농협
+                  option(value='3') KB국민
+                  option(value='4') 신한
+                  option(value='5') 우리
+                  option(value='6') KEB하나
+                  option(value='7') IBK기업
+                  option(value='8') SC제일
+                  option(value='9') IBK기업
+              .form-group.row
+                .col-md-6
+                  label.text-black(for='c_fname')
+                    | First Name 
+                    span.text-danger *
+                  input#c_fname.form-control(type='text' name='c_fname')
+                .col-md-6
+                  label.text-black(for='c_lname')
+                    | Last Name 
+                    span.text-danger *
+                  input#c_lname.form-control(type='text' name='c_lname')
+              .form-group(style='margin:0px') Card Number
+              .form-group.row 
+                .col-md-3
+                  label.text-black
+                    span.text-danger *
+                  input#c_postal_zip.form-control(type='text' name='c_postal_zip')
+                .col-md-3
+                  label.text-black
+                    span.text-danger *
+                  input#c_postal_zip.form-control(type='text' name='c_postal_zip')
+                .col-md-3
+                  label.text-black
+                    span.text-danger *
+                  input#c_postal_zip.form-control(type='text' name='c_postal_zip')
+                .col-md-3
+                  label.text-black
+                    span.text-danger *
+                  input#c_postal_zip.form-control(type='text' name='c_postal_zip')
+              .form-group(style='margin:0px') Expire Date
+              .form-group.row 
+                .col-md-3
+                  label.text-black
+                    span.text-danger *
+                  input#c_postal_zip.form-control(type='text' name='c_postal_zip' placeholder='MM')
+                .col-md-3
+                  label.text-black
+                    span.text-danger *
+                  input#c_postal_zip.form-control(type='text' name='c_postal_zip' placeholder='YY')
+              .form-group.row
+                .col-md-4
+                  label.text-black(for='c_state_country')
+                    | CSV
+                    span.text-danger *
+                  input#c_state_country.form-control(type='text' name='c_state_country')
+              .form-group
+                label.text-black(for='c_create_account' data-toggle='collapse' href='#create_an_account' role='button' aria-expanded='false' aria-controls='create_an_account')
+                  input#c_create_account(type='checkbox' value='1')
+                  |  No, I Disagree
+                #create_an_account.collapse
+                  .py-2
+                    p.mb-3
+                      | 동의하지 않을 시 이용하실 수 없습니다.
+              .form-group
+                label.text-black(for='c_ship_different_address' data-toggle='collapse' href='#ship_different_address' role='button' aria-expanded='false' aria-controls='ship_different_address')
+                  input#c_ship_different_address(type='checkbox' value='1')
+                  |  Yes, I Agree
+                #ship_different_address.collapse
+                  .py-2
+                    p.mb-3
+                      | 동의하셨습니다.
+              .form-group
+                  a.btn.btn-primary.btn-lg.btn-block(href='/finish' role='button' style='float:right')
+                    | Click Here to Process Payment
