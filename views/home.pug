@@ -14,8 +14,8 @@ block content
         .col-md-4
           p(style="text-align:center;")
             img.item_thumb(src=`${n.image}`, height=300 style="padding:10px; margin-top:20px;")
-            div.item_name(style="font-size:20px;padding-top:10px; padding-bottom:5px; text-align:center;") <strong>SAMSUNG  #{n.id}</strong>
+            div.item_name(style="font-size:20px;padding-top:10px; padding-bottom:5px; text-align:center;") <strong>SAMSUNG  #{n.explanation1}</strong>
             p(style="text-align:center;")
               span.h6.item_price #{n.price} 원
               br
-              a.btn.btn-raised(href='/buy', role='button' style="margin-top:5px") 상세보기
+              a.btn.btn-raised(href=`/buy/${n.id}`, role='button' style="margin-top:5px") 상세보기

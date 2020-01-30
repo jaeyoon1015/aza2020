@@ -132,9 +132,11 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  */
 app.get('/', homeController.index);
 app.get('/buy', buyController.click);
+app.get('/buy/:id', buyController.clickItem);
+app.get('/pay/:id', buyController.payItem);
+app.get('/finish/:id', payController.finishItem);
 app.get('/cart', buyController.showCart);
 app.get('/pay', payController.paying);
-app.get('/finish', payController.finish);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);

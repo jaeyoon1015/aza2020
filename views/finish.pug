@@ -19,18 +19,18 @@ block content
                 .cart_item_product.d-flex.flex-row.align-items-center.justify-content-start
                   .cart_item_image
                     div
-                      img(src='https://i2.wp.com/inthenews.co.kr/wp-content/uploads/2019/09/%EB%B9%84%EC%8A%A4%ED%8F%AC%ED%81%AC.jpg?w=1000' alt='')
+                      img(src=`${product.image}` alt='')
                   .cart_item_name_container
                     .cart_item_name
-                      a(href='#') SAMSUNG 비스포크 냉장고
+                      a(href='#') #{product.explanation1}
                     .cart_item_edit
                       a(href='#') Edit Product
                 // Price
-                .cart_item_price ₩2,600,000
+                .cart_item_price ₩ #{product.price}
                 // Quantity
                 .cart_item_quantity 1
                 // Total
-                .cart_item_total ₩2,600,000
+                .cart_item_total ₩ #{product.price}
           .row.row_extra
             .col-lg-6.offset-lg-2
               .cart_total
@@ -48,4 +48,4 @@ block content
                       .cart_total_title Remain Point
                       .cart_total_value.ml-auto ₩1,000
                 .button.checkout_button
-                  a(href='#') Continue Shopping
+                  a(href='/') Continue Shopping

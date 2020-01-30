@@ -60,6 +60,8 @@ exports.postLogin = (req, res, next) => {
   .then((data)=> {
     const abc = data;
     const info = JSON.parse(JSON.stringify(abc))
+
+    console.log('info.password : ' + info.password)
   
     if(info.password === req.body.password){
       console.log('login success')

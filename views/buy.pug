@@ -43,10 +43,11 @@ block content
     .row(style="margin-top:40px;")
         .col-md-8
             p(style="text-align:center;")
-                img(src='https://image.myomee.com/img_disp/goods/2/108/1022/2007531_S_10131000.jpg/dims/quality/90', height=600)
+                img(src=`${product.image}`, height=600)
         .col-md-4(style="margin-top:80px;")
             div(style="font-size:12px;color:#666;")  설치상품 | 즉시할인
-            div(style="font-size:32px; margin-top:10px;") <strong>셰프컬렉션 패밀리허브 921L Honed Black</strong>
+            div(style="font-size:32px; margin-top:10px;") <strong>#{product.explanation1}</strong>  
+            div(style="font-size:32px; margin-top:10px;") <strong>#{product.explanation2}</strong>
             div(style="font-size:12px; margin-bottom:5px;") RF10R9990M1
             .row(style="border-top:1px solid; margin-top:20px;")
             .row(style="margin-top:20px; background-color:#f2f2f2")
@@ -60,13 +61,13 @@ block content
                     div 주의사항
                     br
                 .col-sm-8(style="margin-top:20px; margin-right:10px;")
-                    div 3,240,000 원
+                    div #{product.price}
                     br
-                    div 286,280 포인트 적립 예정
+                    div #{product.point} 포인트 적립 예정
                     br
                     div 삼성카드 청구할인 5%
                     br
                     div 배송 3주 이상 소요
                     br
-                a.btn.btn-outline-primary.btn-block(href='/pay', role='button' style='float:right') 결제하기
+                a.btn.btn-outline-primary.btn-block(href=`/pay/${product.id}`, value='/ming', role='button' style='float:right') 결제하기
     
