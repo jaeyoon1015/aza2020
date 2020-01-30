@@ -4,15 +4,22 @@ block content
   h1 티끌 모아 주주
   hr
   .container
-  each n in products
-  .row
-    .one-third.column
-      .simpleCart_shelfItem 
-        img.item_thumb(src= '#{n.image}')
-        h5.item_name SAMSUNG  #{n.id}
-        span.h6.item_price #{n.price}
-        br
-        a.btn.btn-raised(href='/buy', role='button') 상세보기
+  if products
+    each n in products
+      .row
+        .one-third.column
+          .simpleCart_shelfItem 
+            img.item_thumb(src=`${n.image}` ,height=325)
+            h5.item_name SAMSUNG  #{n.id}
+            span.h6.item_price #{n.price} 원
+            br
+            a.btn.btn-raised(href='/buy', role='button') 상세보기
+
+
+
+
+
+
   //- .container
   //- .row
   //-   .one-third.column
