@@ -29,6 +29,7 @@ exports.getContact = (req, res) => {
  * Send a contact form via Nodemailer.
  */
 exports.postContact = (req, res) => {
+  console.log("!!!!!!!!!!!!postcontact");
   const validationErrors = [];
   let fromName;
   let fromEmail;
@@ -86,7 +87,8 @@ exports.postContact = (req, res) => {
         return transporter.sendMail(mailOptions);
       }
       console.log('ERROR: Could not send contact email after security downgrade.\n', err);
-      req.flash('errors', { msg: 'Error sending the message. Please try again shortly.' });
+      req.flash('errors', { msg: '문의사항 접수에 오류가 발생했습니다. 잠시 후 다시 시도해주세요.' });
+      res.redirect('/contact');
       return false;
     })
     .then((result) => {
