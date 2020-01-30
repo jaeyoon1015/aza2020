@@ -23,10 +23,42 @@ exports.getLogin = (req, res) => {
 };
 
 exports.getMypage = (req, res) => {
-  res.render('mypage', {
-    title: 'My page'
+  var url = 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/{marketcode}/{issuecode}/price'.replace(/{marketcode}/g, encodeURIComponent('kospi')).replace(/{issuecode}/g, encodeURIComponent('005930'));
+  var queryParams = '?' +  encodeURIComponent('apikey') + '=' + encodeURIComponent('l7xx618837e117c34d3abfb3d56431eb1622');
+  const furl = url + queryParams;
+  const fetch = require('node-fetch');
+  var test;
+  User.find({})
+  .then((users) => {
+    const datas = users;
+    const jsonObject = JSON.stringify(datas)
+    const parseObject= JSON.parse(jsonObject);
+    test = parseObject[0];
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+  fetch(furl).then(response=>{
+    if(!response.ok){
+      return;
+    }
+    return response.json()
+    .then(responseJSON=>{
+      const price = responseJSON.result.trdPrc;
+      res.render('mypage', {
+        title : 'My page',
+        user : test,
+        stockPrice : price,
+        currentStockValue : price * test.stock,
+        notyet : price - test.point
+    })
+    .catch((error) =>{
+      console.log(error)
+    })
   });
-};
+});
+}
+
 
 /**
  * POST /login
