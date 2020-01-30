@@ -1,8 +1,8 @@
 .navbar.navbar-light.fixed-top.navbar-expand-lg.bg-light
   .container
     a.navbar-brand(href='/')
-      i.fas.fa-cube
-      | 티끌 모아 주주
+      //i.fas.fa-cube
+      img(src="./blue.png")
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='.navbar-collapse')
       span.sr-only Toggle navigation
       span.navbar-toggler-icon
@@ -11,7 +11,7 @@
         li.nav-item(class=(title === 'Home') ? 'active' : undefined)
           a.nav-link(href='/') Main
         li.nav-item(class=(title === 'About Us') ? 'active' : undefined)
-          a.nav-link(href='/') About Us
+          a.nav-link(href='/aboutus') About Us
         //- li.nav-item(class=(title === 'API Examples') ? 'active' : undefined)
         //-   a.nav-link(href='/api') API Examples
         li.nav-item(class=(title === 'Contact') ? 'active' : undefined)
