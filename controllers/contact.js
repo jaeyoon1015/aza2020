@@ -5,6 +5,16 @@ const nodemailer = require('nodemailer');
  * GET /contact
  * Contact form page.
  */
+
+exports.aboutUS = (req, res) => {
+  const unknownUser = !(req.user);
+
+  res.render('aboutus', {
+    title: 'About us',
+    unknownUser,
+  });
+};
+
 exports.getContact = (req, res) => {
   const unknownUser = !(req.user);
 

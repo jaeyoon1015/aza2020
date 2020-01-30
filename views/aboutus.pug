@@ -1,0 +1,131 @@
+extends layout
+
+block content
+    //- .container
+    //-     .row(style="margin-bottom:50px;margin-top:150px; ")
+    //-         .col-md-12 
+    //-             .span(style="color:#6c757d;font-size:50px;text-align:center; ") ABOUT US
+    //-     .row(style="margin-bottom:150px; margin-top:10px;")
+    //-         .col-md-2
+    //-             .span(style="font-size:100px; color:#dee2e6; text-align:right; ") [
+    //-             //margin top이 8에서에 비해 2배로 10 20 10
+    //-         .col-md-8
+    //-             .span(style="color:#6c757d;font-size:20px;text-align:center; margin-top:20px; margin-bottom:5px;") 티끌 모아 주주는
+    //-             .span(style="color:#6c757d;font-size:20px;text-align:center; margin-bottom:5px;") 주식에 돈을 투자하는 것이 두려운 <strong>주식 초보</strong>에게
+    //-             .span(style="color:#6c757d;font-size:20px;text-align:center; margin-bottom:5px;") 알아서 모이는 카드 포인트로 <strong>'부담 없는 시작'</strong>을 도와드립니다.
+    //-         .col-md-2
+    //-             .span(style="font-size:100px; color:#dee2e6; text-align:left;") ]
+    //-     .row
+    //-         .col-md-2
+    //-         .col-md-3
+    //-             .span(style="font-size:20px; color:#6c757d; text-align:center;") 활용도 낮고
+    //-             .span(style="font-size:20px; color:#6c757d; text-align:center;") 만료 기간이 있는
+    //-             .span(style="font-size:20px; color:#6c757d; text-align:center;") 카드 포인트 활용
+    //-         .col-md-2
+    //-             .span(style="font-size:50px; color:#6c757d;text-align:center; margin-top:10px;") ⟶
+
+    //-         .col-md-3(style="margin-top:10px")
+    //-             .sp(style="font-size:20px; color:#6c757d; text-align:center;") 사용자는 부담 없이
+    //-             .span(style="font-size:20px; color:#6c757d; text-align:center;") 주식 투자 경험 가능
+    //-         .col-md-2
+            
+
+    //-     .br
+    //-     .br
+    //-     .br
+    //-     .br
+    //-     .br
+    //-     .br
+    .sp-container
+    .row.m-0
+      .col-lg-6.p-0
+        .gallery-left-col(style="padding-top:100px;")
+          //- h2.big-title About Us
+        .gallery-item
+          img(src='https://ifh.cc/g/cVSoB.png' weight=400 height=400 style="margin-left:50px;")
+          //-   h4 Now @ The Look
+          //-   p Artist: John Doe
+          //-   a.site-btn(href='#')
+          //-     | view gallery 
+          //-     // img(src='img/icons/arrow-right-black.png' alt='')
+          //- .info-numbers
+          //-   h2.gallery-title Numbers
+          //-   .in-item
+          //-     h2
+          //-       | 130
+          //-       span +
+          //-     h4 Photography Exibitions
+          //-   .in-item
+          //-     h2
+          //-       | 150 000
+          //-       span +
+          //-     h4 Visitors
+          //-   .in-item
+          //-     h2 1395
+          //-     h4 Days
+          //-   .in-item
+          //-     h2
+          //-       | 86
+          //-       span +
+          //-     h4 Artists
+      .col-lg-6.p-0
+        //- .gallery-right-col
+        //-   .gallery-content
+        //- h2(style="padding-top:110px;") Our Vision
+        h2(style="padding-top:200px;")
+            | &ldquo;부담 없이 투자하는&rdquo;
+        p(style="padding-top:50px;padding-bottom:110px; ")
+          | 티끌 모아 주주는
+          br
+          | 주식에 돈을 투자하는 것이 두려운 주식 초보에게
+          br
+          | 알아서 모이는 카드 포인트로 <strong>'부담 없는 시작'</strong>을 도와드립니다.
+       
+      //-   p
+      //-     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis et augue non mollis. Sed sagittis, turpis a imperdiet eleifend, est ligula convallis augue, sit amet porta urna justo vel neque. Pellentesque a interdum nunc.
+      //-   .gallery-quite
+      //-     h2
+      //-       | &ldquo;It is good to love many things, for therein lies the true strength, and who-soever loves much performs much, and can accomplish much, and what is done in love is well done.&rdquo;
+      //-     h3 Vincent Van Gogh
+      //- h2.gallery-title Soon @ The Look
+      //- .gallery-item
+      //-   //img(src='img/gallery/1.jpg' alt='#')
+      //-   h4 Red Passion 2017k
+      //-   p
+      //-     | Artist: John Doe
+      //-     br
+      //-     | February 3, 2019&ndash;July 28, 2019
+
+    .row
+      .col-md-4
+      .col-md-4(style="text-align:center;padding-bottom:10px")
+        h2 For User
+      .col-md-4
+
+    .row(style="border:2px solid #dee2e6; padding-top:30px;padding-bottom:30px;")
+      .col-md-2
+      .col-md-3
+        p(style="color:black; text-align:center;")
+          | 활용도 낮고
+          br
+          | 만료 기간이 있는
+          br
+          | 카드 포인트 활용
+      .col-md-2
+        .span(style="font-size:50px; text-align:center; margin-top:10px;") ⟶
+
+      .col-md-3(style="margin-top:10px")
+        p(style="color:black; text-align:center;") 
+          | 사용자는 부담 없이
+          br
+          | 주식 투자 경험 가능
+          
+      .col-md-2
+
+    .row(style="text-align:center; margin-top:50px;border:2px solid #dee2e6;")
+      .col-md-1
+      .col-md-10
+        img(src='https://ifh.cc/g/PabnE.png')
+      .col-md-1
+
+      
