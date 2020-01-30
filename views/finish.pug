@@ -57,18 +57,18 @@ block content
           .row.row_extra
             .col-lg-6.offset-lg-2(style="margin-left:250px; text-align:center;")
               .cart_total
-                .section_title Point
+                .section_title 포인트 안내
                 .section_subtitle Final info
                 .cart_total_container(style="margin-top:20px;")
                   ul
                     li.d-flex.flex-row.align-items-center.justify-content-start
-                      .cart_total_title Accumulate Point
-                      .cart_total_value.ml-auto ₩60,000
+                      .cart_total_title 가용 포인트
+                      .cart_total_value.ml-auto ₩#{userPoint}
                     li.d-flex.flex-row.align-items-center.justify-content-start
-                      .cart_total_title Stock Purchase
+                      .cart_total_title 현재 주가
                       .cart_total_value.ml-auto ₩#{stockPrice} * 1
                     li.d-flex.flex-row.align-items-center.justify-content-start
-                      .cart_total_title Remain Point
-                      .cart_total_value.ml-auto ₩1,000
+                      .cart_total_title 남은 포인트
+                      .cart_total_value.ml-auto ₩#{remind}
                 .button.checkout_button
                   a(href='/') Continue Shopping
