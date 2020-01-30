@@ -1,65 +1,21 @@
 extends layout
-
 block content
-  h1 티끌 모아 주주
-  hr
   .container
-  if products
-    each n in products
-      .row
-        .one-third.column
-          .simpleCart_shelfItem 
-            img.item_thumb(src=`${n.image}` ,height=325)
-            h5.item_name SAMSUNG  #{n.id}
-            span.h6.item_price #{n.price} 원
-            br
-            a.btn.btn-raised(href='/buy', role='button') 상세보기
+    .row(style="width:1100px;")
+      img(src='http://res.heraldm.com/content/image/2019/06/25/20190625000679_0.jpg' style="width:1100px; height:auto;")
+  h2(style="margin-top:80px") 대형 가전
+  p(style="margin-top:10px") 삼성전자의 고품격 대형 가전 collection을 만나보세요.
+  hr
 
-
-
-
-
-
-  //- .container
-  //- .row
-  //-   .one-third.column
-  //-     .simpleCart_shelfItem
-  //-       img.item_thumb(src='https://i2.wp.com/inthenews.co.kr/wp-content/uploads/2019/09/%EB%B9%84%EC%8A%A4%ED%8F%AC%ED%81%AC.jpg?w=1000', height=325)
-  //-       h5.item_name SAMSUNG  비스포크 냉장고
-  //-       //- select.item_size
-  //-       //-   option(value='Small')  Small 
-  //-       //-   option(value='Medium')  Medium 
-  //-       //-   option(value='Large')  Large 
-  //-       //- .qty QTY
-  //-       //- input.item_Quantity(type='text' value='1')
-  //-       span.h6.item_price 2,600,000원
-  //-       br
-  //-       a.btn.btn-raised(href='/buy', role='button') 상세보기
-  //-   .one-third.column
-  //-     .simpleCart_shelfItem
-  //-       img.item_thumb(src='https://img.kr.news.samsung.com/kr/wp-content/uploads/2013/11/WF80F5E0W4W.jpg', height=325)
-  //-       h5.item_name SAMSUNG  버블 세탁기
-  //-       //- select.item_size
-  //-       //-   option(value='Small')  Small 
-  //-       //-   option(value='Medium')  Medium 
-  //-       //-   option(value='Large')  Large 
-  //-       //- .qty QTY
-  //-       //- input.item_Quantity(type='text' value='1')
-  //-       span.h6.item_price 1,000,000원
-  //-       br
-  //-       a.btn.btn-raised(href='/buy', role='button') 상세보기
-  //-   .one-third.column
-  //-     .simpleCart_shelfItem
-  //-       img.item_thumb(src='https://cdn.imweb.me/thumbnail/20191024/ebfcf8a4316cf.png', height=325)
-  //-       h5.item_name SAMSUNG 비스포크 김치 냉장고 
-  //-       //- select.item_size
-  //-       //-   option(value='Small')  Small 
-  //-       //-   option(value='Medium')  Medium 
-  //-       //-   option(value='Large')  Large 
-  //-       //- .qty QTY
-  //-       //- input.item_Quantity(type='text' value='1')
-  //-       span.h6.item_price 1,000,000원
-  //-       br
-  //-       a.btn.btn-raised(href='/buy', role='button') 상세보기
-
-        //- a.btn.btn-raised(href='/dbtest', role='button') DB 테스트
+  .container
+   if products
+    .row
+      each n in products
+        .col-md-4
+          p(style="text-align:center;")
+            img.item_thumb(src=`${n.image}`, height=300 style="padding:10px; margin-top:20px;")
+            div.item_name(style="font-size:20px;padding-top:10px; padding-bottom:5px; text-align:center;") <strong>SAMSUNG  #{n.id}</strong>
+            p(style="text-align:center;")
+              span.h6.item_price #{n.price} 원
+              br
+              a.btn.btn-raised(href='/buy', role='button' style="margin-top:5px") 상세보기
