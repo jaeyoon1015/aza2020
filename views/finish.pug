@@ -2,41 +2,64 @@ extends layout
 block content
     .super_container
       .cart_info
-        .container(style='font-size:50px') 결제완료 
-          .row
-            .col
-              // Column Titles
-              .cart_info_columns.clearfix
-                .cart_info_col.cart_info_col_product Product
-                .cart_info_col.cart_info_col_price Price
-                .cart_info_col.cart_info_col_quantity Quantity
-                .cart_info_col.cart_info_col_total Total
-          .row.cart_items_row
-            .col
-              // Cart Item
-              .cart_item.d-flex.flex-lg-row.flex-column.align-items-lg-center.align-items-start.justify-content-start
-                // Name
-                .cart_item_product.d-flex.flex-row.align-items-center.justify-content-start
-                  .cart_item_image
-                    div
-                      img(src=`${product.image}` alt='')
-                  .cart_item_name_container
-                    .cart_item_name
-                      a(href='#') #{product.explanation1}
-                    .cart_item_edit
-                      a(href='#') Edit Product
-                // Price
-                .cart_item_price ₩ #{product.price}
-                // Quantity
-                .cart_item_quantity 1
-                // Total
-                .cart_item_total ₩ #{product.price}
+        .container(style='font-size:30px') 결제완료 
+          .row(style="margin-top:10px; text-align:center;")
+            .col-md-6
+              h6 Product
+            .col-md-2
+              h6 Price
+            .col-md-2
+              h6 Quantity
+            .col-md-2
+              h6 Total
+          .row(style="margin-top:10px; border-top:2px solid #dee2e6;text-align:center;")
+            .col-md-6(style="margin-top:20px;")
+              img(src=`${product.image}` alt='' height=183)
+              br
+              a(style="font-size:14px; color:#007bff") Edit Product
+            .col-md-2(style="margin-top:70px;")
+              a(style="font-size:14px;") ₩ #{product.price} 
+            .col-md-2(style="margin-top:70px;")
+              a(style="font-size:20px;") 1
+            .col-md-2(style="margin-top:70px;")
+              a(style="font-size:14px;") ₩ #{product.price}
+
+          //- .row
+          //-   .col
+          //-     // Column Titles
+          //-     .cart_info_columns.clearfix
+          //-       .cart_info_col.cart_info_col_product Product
+          //-       .cart_info_col.cart_info_col_price Price
+          //-       .cart_info_col.cart_info_col_quantity Quantity
+          //-       .cart_info_col.cart_info_col_total Total
+          //- .row.cart_items_row
+          //-   .col
+          //-     // Cart Item
+          //-     .cart_item.d-flex.flex-lg-row.flex-column.align-items-lg-center.align-items-start.justify-content-start
+          //-       // Name
+          //-       .cart_item_product.d-flex.flex-row.align-items-center.justify-content-start
+          //-         .cart_item_image
+          //-           div
+          //-             img(src=`${product.image}` alt='')
+          //-         .cart_item_name_container
+          //-           .cart_item_name
+          //-             a(href='#') #{product.explanation1}
+          //-           .cart_item_edit
+          //-             a(href='#') Edit Product
+          //-       // Price
+          //-       .cart_item_price ₩ #{product.price}
+          //-       // Quantity
+          //-       .cart_item_quantity 1
+          //-       // Total
+          //-       .cart_item_total ₩ #{product.price}
+          
+          
           .row.row_extra
-            .col-lg-6.offset-lg-2
+            .col-lg-6.offset-lg-2(style="margin-left:250px; text-align:center;")
               .cart_total
                 .section_title Point
                 .section_subtitle Final info
-                .cart_total_container
+                .cart_total_container(style="margin-top:20px;")
                   ul
                     li.d-flex.flex-row.align-items-center.justify-content-start
                       .cart_total_title Accumulate Point

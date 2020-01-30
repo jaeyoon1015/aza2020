@@ -14,19 +14,18 @@ block content
             
             
             .row(style="margin-top:20px; background-color:#f2f2f2; margin-bottom:20px;")
-                .col-sm-12(style="margin-top:20px; margin-right:10px;")
+                .col-sm-12(style="margin-top:20px; margin-right:10px; margin-bottom:20px;")
                     span <strong>판매가</strong>
-                    span(style="padding-left:82px") 3,240,000 원
+                    span(style="padding-left:82px") #{product.price}원
                     br
                     br
                     span <strong>포인트</strong>
-                    span(style="padding-left:82px") 286,280 포인트 적립 예정
+                    span(style="padding-left:82px") #{product.point} 포인트 적립 예정
                     br
                     br
-                .col-sm-8(style="margin-top:20px; margin-right:10px;")
-                    div #{product.price}
+                    span <strong>구매시 혜택</strong>
+                    span(style="padding-left:50px") 삼성카드 청구할인 5%
                     br
-                    div #{product.point} 포인트 적립 예정
                     br
                     span <strong>TIP</strong>
                     span(style="padding-left:105px") 배송 3주 이상 소요
