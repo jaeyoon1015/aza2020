@@ -1,28 +1,25 @@
 extends layout
-
 block content
-  .container
-    .img(src='images/timoju.png' width="100" height="100")
-  .container
-    .row(style="border:1px solid #dee2e6; padding:15px;")
+  .container(style= "margin-top:70px")
+    .row(style="border:1px solid #dee2e6; padding:15px; ")
       .col-md-2(style="border-right:1px solid #dee2e6")
         img.item_thumb()
       .col-md-10(style)
-        .span(style="font-size:1;") 저희 쇼핑몰을 이용해주셔서 감사합니다. 
-        .span(style="font-size:1;") "삼성" 주식을 구입하시기 까지 남은 포인트는 30,000 포인트입니다.
-    .row(style="border:2px solid #dee2e6; padding:15px; margin-top:20px;")
+        .span(style="font-size:1;") <strong>#{user.email}님,</strong> 저희 쇼핑몰을 이용해주셔서 감사합니다. 
+        .span(style="font-size:1;") "삼성전자" 주식을 구입하시기 까지 남은 포인트는 <strong>#{notyet}</strong> 포인트입니다.
+    .row(style="border:2px solid #dee2e6; padding:15px; margin-top:30px;")
       .col-md-3
         .span(style="font-size:1;") * 가용포인트
-        .span(style="font-size:1;") * 사용포인트 
+        .span(style="font-size:1;") * 현재 삼성 주가
       .col-md-3
-        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
-        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
+        .span(style="font-size:1; font-weight:bold; text-align:right;") #{user.point}원
+        .span(style="font-size:1; font-weight:bold; text-align:right;") #{stockPrice}원
       .col-md-3(style="border-left:1px solid #dee2e6;")
-        .span(style="font-size:1;") * 주식 총 가치
-        .span(style="font-size:1;") * 사용포인트 
+        .span(style="font-size:1;") * 구매한 주식
+        .span(style="font-size:1;") * 총 평가 금액
       .col-md-3
-        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
-        .span(style="font-size:1; font-weight:bold; text-align:right;") 0원
+        .span(style="font-size:1; font-weight:bold; text-align:right;") #{user.stock}주
+        .span(style="font-size:1; font-weight:bold; text-align:right;") #{currentStockValue}원
     .row(style="border-top:1px solid #444444; margin-top:30px;")
       .col-md-3(style="border-right:1px solid #dee2e6;")
         .span(style="margin-top:20px; text-align:center;") ORDER
