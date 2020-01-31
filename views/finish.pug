@@ -23,52 +23,22 @@ block content
               a(style="font-size:20px;") 1
             .col-md-2(style="margin-top:70px;")
               a(style="font-size:14px;") ₩ #{product.price}
-
-          //- .row
-          //-   .col
-          //-     // Column Titles
-          //-     .cart_info_columns.clearfix
-          //-       .cart_info_col.cart_info_col_product Product
-          //-       .cart_info_col.cart_info_col_price Price
-          //-       .cart_info_col.cart_info_col_quantity Quantity
-          //-       .cart_info_col.cart_info_col_total Total
-          //- .row.cart_items_row
-          //-   .col
-          //-     // Cart Item
-          //-     .cart_item.d-flex.flex-lg-row.flex-column.align-items-lg-center.align-items-start.justify-content-start
-          //-       // Name
-          //-       .cart_item_product.d-flex.flex-row.align-items-center.justify-content-start
-          //-         .cart_item_image
-          //-           div
-          //-             img(src=`${product.image}` alt='')
-          //-         .cart_item_name_container
-          //-           .cart_item_name
-          //-             a(href='#') #{product.explanation1}
-          //-           .cart_item_edit
-          //-             a(href='#') Edit Product
-          //-       // Price
-          //-       .cart_item_price ₩ #{product.price}
-          //-       // Quantity
-          //-       .cart_item_quantity 1
-          //-       // Total
-          //-       .cart_item_total ₩ #{product.price}
-          
-          
+                        
           .row.row_extra
             .col-lg-6.offset-lg-2(style="margin-left:250px; text-align:center;")
               .cart_total
-                .section_title 포인트 안내
+                .section_title Point
                 .section_subtitle Final info
                 .cart_total_container(style="margin-top:20px;")
                   ul
                     li.d-flex.flex-row.align-items-center.justify-content-start
-                      .cart_total_title 가용 포인트
-                      .cart_total_value.ml-auto ₩#{userPoint}
+                      .cart_total_title 현재 포인트
+                      .cart_total_value.ml-auto ₩ #{acupoint}
                     li.d-flex.flex-row.align-items-center.justify-content-start
-                      .cart_total_title 현재 주가
-                      .cart_total_value.ml-auto ₩#{stockPrice} * 1
+                      .cart_total_title 현재 주가 
+                      .cart_total_value.ml-auto ₩#{stockPrice} * #{stockNum}
                     li.d-flex.flex-row.align-items-center.justify-content-start
                       .cart_total_title 남은 포인트
-                      .cart_total_value.ml-auto ₩#{remind}
+                      .cart_total_value.ml-auto ₩ #{rempoint}
                 .button.checkout_button
                   a(href='/') Continue Shopping

@@ -34,29 +34,30 @@ exports.getMypage = (req, res) => {
     const jsonObject = JSON.stringify(datas)
     const parseObject= JSON.parse(jsonObject);
     test = parseObject[0];
+    
+    fetch(furl).then(response=>{
+      if(!response.ok){
+        return;
+      }
+      return response.json()
+      .then(responseJSON=>{
+        const price = responseJSON.result.trdPrc;
+        res.render('mypage', {
+          title : 'My page',
+          user : test,
+          stockPrice : price,
+          currentStockValue : price * test.stock,
+          notyet : price - test.point
+      })
+      .catch((error) =>{
+        console.log(error)
+      })
+    });
+  });
   })
   .catch((err) => {
     console.log(err)
   })
-  fetch(furl).then(response=>{
-    if(!response.ok){
-      return;
-    }
-    return response.json()
-    .then(responseJSON=>{
-      const price = responseJSON.result.trdPrc;
-      res.render('mypage', {
-        title : 'My page',
-        user : test,
-        stockPrice : price,
-        currentStockValue : price * test.stock,
-        notyet : price - test.point
-    })
-    .catch((error) =>{
-      console.log(error)
-    })
-  });
-});
 }
 
 
